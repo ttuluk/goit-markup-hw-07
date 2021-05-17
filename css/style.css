@@ -376,7 +376,7 @@ p {
   height: 18px;
 }
 
-.form__input:focus {
+.form--accent:focus {
   border: 1px solid var(--accent-text-color);
   fill: var(--title-text-color);
   outline: none;
@@ -675,14 +675,16 @@ p {
   transition: fill var(--animation);
 }
 
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-  fill: var(--primary-bg-color);
-}
-
 .social__link:hover,
 .social__link:focus {
   background-color: var(--accent-text-color);
+  transition: background-color var(--animation);
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: var(--primary-bg-color);
+  transition: fill var(--animation);
 }
 
 /*постоянные клиенты*/
@@ -742,6 +744,17 @@ p {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer__box {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.footer__adress-box {
+  display: flex;
+  flex-direction: column;
+  width: 231px;
+}
 
 .footer__logo {
   padding: 0;
@@ -759,6 +772,8 @@ p {
 
 .address {
   font-style: inherit;
+}
+.address--margin {
   margin-top: 20px;
 }
 
@@ -774,21 +789,13 @@ p {
 
   transition: color var(--animation);
 }
+
 .contacts__link {
   color: var(--footer-text-color);
 
   transition: color var(--animation);
 }
-.footer__box {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  justify-content: space-between;
-}
-.footer__adress-box {
-  display: flex;
-  width: 231px;
-}
+
 .social-box {
   display: flex;
   flex-direction: column;
@@ -799,21 +806,22 @@ p {
 .social__item {
   display: flex;
 }
+
 .social__link--bkg-color {
   background-color: var(--footer-social-color);
-
   transition: background-color var(--animation);
 }
-.social__icon {
+.social__icon--bkg-color {
   fill: var(--primary-bg-color);
-
-  transition: fill var(--animation);
 }
 
 .footer-form__box {
   display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
 }
-.footer-form__mail {
+
+.footer-form__mail-box {
   display: flex;
   flex-direction: row;
   width: 570px;
@@ -830,6 +838,7 @@ p {
   height: 50px;
   border-radius: 4px;
   margin-top: 20px;
+  margin-right: 12px;
   padding: 15px;
   background-color: inherit;
   color: var(--primary-bg-color);
@@ -912,9 +921,6 @@ p {
 }
 
 .galery {
-  display: flex;
-  margin-top: -30px;
-  margin-left: -30px;
   flex-basis: calc((100% - 3 * 30px) / 3);
 }
 
@@ -932,11 +938,14 @@ p {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  margin-top: 0;
-  margin-bottom: 0;
+
   box-shadow: none;
 
   transition: box-shadow var(--animation);
+}
+.card--link {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .card:hover,
@@ -946,6 +955,7 @@ p {
 
 .card__text {
   position: relative;
+  top: 0;
   border-right: 1px solid var(--border-portfolio-color);
   border-bottom: 1px solid var(--border-portfolio-color);
   border-left: 1px solid var(--border-portfolio-color);
