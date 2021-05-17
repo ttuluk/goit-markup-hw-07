@@ -1,0 +1,53 @@
+.footer-form__box {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+
+.footer-form__mail-box {
+  display: flex;
+  flex-direction: row;
+  width: 570px;
+  margin-left: 70px;
+
+  align-items: flex-end;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.footer-form__input {
+  width: 358px;
+  height: 50px;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-right: 12px;
+  padding: 15px;
+  background-color: inherit;
+  color: var(--primary-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+.footer-form__button {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: var(--accent-text-color);
+  color: var(--primary-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  text-align: center;
+  align-items: flex-start;
+}
+.footer-form__send {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.footer-form__svg {
+  fill: var(--primary-bg-color);
+}

@@ -38,25 +38,15 @@ p {
   color: var(--prime-text-color);
 
   transition: color var(--animation);
-}
-.link:hover,
-.link:focus {
-  color: var(--accent-text-color);
-  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+    cursor: pointer;
+  }
 }
 .list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  padding: 10px 30px;
-  letter-spacing: 0.06em;
-  transition: background-color var(--animation) color var(--animation)
-    box-shadow var(--animation);
 }
