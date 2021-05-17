@@ -25,7 +25,6 @@
   --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*тип блочной модели*/
 html {
   box-sizing: border-box;
 }
@@ -46,21 +45,19 @@ body {
   letter-spacing: 0.03em;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/*убирает точки в списке*/
 .list {
   list-style: none;
   color: inherit;
 }
 
-/*убирает подчеркивание ссылок*/
 .link {
   text-decoration: none;
   color: inherit;
@@ -69,6 +66,36 @@ body {
   margin-bottom: 0;
   color: var(--prime-text-color);
   transition: color var(--animation);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-text-color);
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  padding: 10px 30px;
+  letter-spacing: 0.06em;
+  transition: background-color var(--animation) color var(--animation) box-shadow var(--animation);
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-nav__link {
@@ -117,19 +144,7 @@ body {
 }
 
 /*ссылки активные*/
-.link:hover,
-.link:focus {
-  color: var(--accent-text-color);
-  cursor: pointer;
-}
-
 /*навигационные ссылки*/
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .header-block {
   display: flex;
   align-items: center;
@@ -205,24 +220,6 @@ body {
 }
 
 /*утилиты*/
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  padding: 10px 30px;
-  letter-spacing: 0.06em;
-  transition: background-color var(--animation) color var(--animation) box-shadow var(--animation);
-}
-
 /*герой*/
 .hero {
   padding-top: 200px;
@@ -491,6 +488,18 @@ p {
 }
 
 /*Раздел преимущества*/
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -508,18 +517,6 @@ p {
 }
 
 /*скрытый заголовок*/
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-  margin-bottom: 0;
-}
-
 .card-set {
   display: flex;
   flex-wrap: wrap;
