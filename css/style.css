@@ -861,7 +861,7 @@ p {
 }
 
 /*сss для портфолио*/
-.container .filter-list {
+.filter {
   display: flex;
   justify-content: center;
   margin-left: auto;
@@ -870,14 +870,14 @@ p {
   margin-bottom: 50px;
 }
 
-.filter-item {
+.filter__item {
   display: flex;
   margin-left: 8px;
 }
-filter-item:first-child {
+.filter__item:first-child {
   margin-left: 0;
 }
-.filter-button {
+.filter__button {
   padding: 6px 22px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -895,7 +895,7 @@ filter-item:first-child {
     box-shadow var(--animation);
 }
 
-.filter-all {
+.filter--all {
   background-color: var(--accent-text-color);
   color: var(--secondary-text-color);
 
@@ -903,29 +903,29 @@ filter-item:first-child {
     box-shadow var(--animation);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter__button:hover,
+.filter__button:focus {
   background-color: var(--accent-text-color);
   color: var(--secondary-text-color);
   cursor: pointer;
   box-shadow: var(--prime-card-swadow);
 }
 
-.card-set .galery-list {
+.galery {
   display: flex;
   margin-top: -30px;
   margin-left: -30px;
   flex-basis: calc((100% - 3 * 30px) / 3);
 }
 
-.galery-item {
+.galery__item {
   display: flex;
   margin-left: 30px;
   margin-top: 30px;
   cursor: pointer;
 }
 
-.galery-card {
+.card {
   overflow: hidden;
 
   display: block;
@@ -939,12 +939,12 @@ filter-item:first-child {
   transition: box-shadow var(--animation);
 }
 
-.galery-card:hover,
-.galery-card:focus {
+.card:hover,
+.card:focus {
   box-shadow: var(--prime-card-swadow);
 }
 
-.galery-card-text {
+.card__text {
   position: relative;
   border-right: 1px solid var(--border-portfolio-color);
   border-bottom: 1px solid var(--border-portfolio-color);
@@ -954,7 +954,7 @@ filter-item:first-child {
   z-index: 4;
 }
 
-.galery-title {
+.card__title {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -965,12 +965,12 @@ filter-item:first-child {
 }
 
 /*overlay-portfolio*/
-.galery-image-box {
+.card__image-box {
   position: relative;
   top: 0;
 }
 
-.galery-overlay {
+.card__overlay {
   position: absolute;
   background-color: var(--overlay-bg-color);
   width: 100%;
@@ -983,14 +983,14 @@ filter-item:first-child {
   transition: transform 500ms linear, overlay 500ms linear;
 }
 
-.galery-card:hover .galery-overlay,
-.galery-card:focus .galery-overlay {
+.card:hover .card__overlay,
+.card:focus .card__overlay {
   overlay: 1;
   visibility: visible;
   transform: translateY(-100%);
 }
 
-.galery-overlay-text {
+.card__overlay-text {
   position: relative;
   top: 0;
   width: 100%;
